@@ -1,0 +1,72 @@
+
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : ''">
+  <div class="logo-container">
+      <button class="logo" (click)="toggleCollapse()">L</button>
+      <div class="logo-text" *ngIf="collapsed">Logo</div>
+      <button class="btn-close" *ngIf="collapsed" (click)="closeSidenav()"></button>
+      <i class="fa-solid fa-xmark fa-times"></i>
+  </div>
+  <ul class="sidenav-nav">
+    <li class="sidenav-nav-item" *ngFor="let data of navData">
+      <a class="sidenav-nav-link" [routerLink]="[data.routeLink]" 
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{exact:true}"
+      >
+            <i class="sidenav-link-icon" [class]="data.icon"></i> 
+            <span class="sidenav-link-text" *ngIf="collapsed">{{data.label}}</span> 
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+<!-- <div class="mt-4">
+     <div class="row flex-nowrap">
+           <div class="bg-white">
+                <div class="bg-white p-2">
+                       <a class="d-flex text-decoration-none mt-1 align-items-center text-dark" href="">
+                             <span class="fs-4 d-none d-sm-inline">SideMenu</span>
+                       </a>
+                       <ul class="nav nav-pill flex-column mt-4">
+                             <li class="nav-item">
+                                <a class="nav-link text-dark" href="" routerLinkActive="myActiveClass active" routerLink="/dashboard">
+                                    <i class="fa-solid fa-table-columns"></i>
+                                    <span class="d-none d-sm-inline sidebar-text">Dashboard</span>
+                                </a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link text-dark" href="" routerLinkActive="myActiveClass active" routerLink="/classes">
+                                    <i class="fa-regular fa-folder"></i>
+                                    <span class="d-none d-sm-inline sidebar-text">Classes</span>
+                                </a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link text-dark" href="" routerLinkActive="myActiveClass active" routerLink="/resources">
+                                    <i class="fa-regular fa-clipboard"></i>
+                                    <span class="d-none d-sm-inline sidebar-text">Resources</span>
+                                </a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link text-dark" href="" routerLinkActive="myActiveClass active" routerLink="/learning-plan">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <span class="d-none d-sm-inline sidebar-text">Learning Plan</span>
+                                </a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link text-dark" href="" routerLinkActive="myActiveClass active" routerLink="/chat">
+                                    <i class="fa-regular fa-comment"></i>
+                                    <span class="d-none d-sm-inline sidebar-text">Chat</span>
+                                </a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link text-dark" href="" routerLinkActive="myActiveClass active" routerLink="/settings">
+                                    <i class="fa-solid fa-house"></i>
+                                    <span class="d-none d-sm-inline sidebar-text">Settings</span>
+                                </a>
+                             </li>
+                       </ul>
+                </div>
+           </div>  
+     </div>
+</div>  -->
+

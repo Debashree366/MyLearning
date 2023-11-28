@@ -1,0 +1,27 @@
+.profileimg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 26px;
+}
+.profile-txt{
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+}
+.textarea{
+    border-radius: 8px;
+    padding: 7px;
+    width: 38px;
+    text-align: center;
+    background-color:#F5F5F5 ;
+}
+.b2txt{
+    font-size: 14px;
+    display: flex;
+    width: 85px;
+}
+.remtxt{
+    font-size: 14px;
+    display: flex;
+}
