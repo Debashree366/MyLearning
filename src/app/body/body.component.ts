@@ -10,6 +10,8 @@ export class BodyComponent {
   @Input() collapsed = false;
   @Input() screenWidth = 0;
 
+ 
+
   getBodyClass(): string {
     let styleClass = '';
     if(this.collapsed && this.screenWidth > 768){

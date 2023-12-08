@@ -5,9 +5,14 @@ export const navbarData = [
       icon: 'fa-solid fa-table-columns',
     },
     {
+      routeLink: 'chat',
+      label: 'Chat',
+      icon: 'fa-regular fa-folder',
+    },
+    {
       routeLink: 'classes',
       label: 'Classes',
-      icon: 'fa-regular fa-folder',
+      icon: 'fa-regular fa-pen-to-square',
     },
     {
       routeLink: 'resources',

@@ -12,21 +12,17 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ClassesComponent } from './classes/classes.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { LearningPlanComponent } from './learning-plan/learning-plan.component';
-import { ChatComponent } from './chat/chat.component';
 import { SettingsComponent } from './settings/settings.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserDataService } from './shared/user-data.service';
 import { BodyComponent } from './body/body.component';
+import { ChatComponent } from './chat/chat.component';
+import { ChartsModule } from 'ng2-charts';
+import * as chart from 'chart.js';
+
 
 const appRoutes:Routes=[
-  // {path:'', redirectTo:'login', pathMatch:'full'},
-  // {path:'dashboard', component: DashboardComponent},
-  // {path:'classes', component: ClassesComponent},
-  // {path:'resources', component: ResourcesComponent},
-  // {path:'learning-plan', component: LearningPlanComponent},
-  // {path:'chat', component: ChatComponent},
-  // {path:'settings', component: SettingsComponent},
-  
+    
   ];
   
   
@@ -42,14 +38,15 @@ const appRoutes:Routes=[
     ClassesComponent,
     ResourcesComponent,
     LearningPlanComponent,
-    ChatComponent,
     SettingsComponent,
-    BodyComponent
+    BodyComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule,
   ],
   providers: [UserDataService],
   bootstrap: [AppComponent]

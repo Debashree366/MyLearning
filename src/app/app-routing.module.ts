@@ -6,6 +6,7 @@ import { ResourcesComponent } from './resources/resources.component';
 import { LearningPlanComponent } from './learning-plan/learning-plan.component';
 import { ChatComponent } from './chat/chat.component';
 import { SettingsComponent } from './settings/settings.component';
+import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'dashboard', pathMatch: 'full'},
